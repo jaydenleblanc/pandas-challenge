@@ -1,0 +1,41 @@
+1. Create JAR for Michael when delivered equip is verified but over $75. - add JavaScript that allows michael to approve or if linked inbound update to Pending Equipment Return OR give view of Job Activities where there is no linked JAR but over $75
+
+2. Test setting [Route Revision Approval] to approve and see what that does.
+ 
+-- Make [Route Revision Approval] only editable to Michael if not linked RR JAR, read-only if there is a linked JAR. Make visible
+
+-- Get rid of 'denied' setting [Route Revision Approval]
+
+Read-Only all the time. Only readable by Michael if its set to 'Pending'
+- no jar but over $75 OR is a JAR and its auto approved 
+- and under $75 with a JAR and if 
+
+Put outcomes into a matrix:
+
+Default value = NULL (means theres already a JAR)
+PENDING = 
+- no JAR but over $75 >> changes to APPROVED
+
+
+
+PENDING: over $75 and no linked installer JAR and [Actiivty Pay Status] == 'Pay Revision Pending'
+
+APPROVED: once Michael Reviews (over $75)/ no linked installer JAR. 
+
+
+
+- When [Route Revision Approval] == 'Approved' [Activity Pay Status] updates to 'Pending Equipment Return' IF there is a linked and active inbound case 
+
+add another pick list value to [Job Equip Status] 'Override - Customer Lost Equipment - Release Pay' and 'Override - Installer Reports Equipment has been Returned - Release Pay' >> Resolves inbound case and updates [Activity Pay Status]
+
+- if there is an invoice to the installer, then that invoice is to be canceled.
+
+
+Save Job Activity 
+
+
+
+
+2. After resolution of JAR and there is an inbound then [Activity Pay Status]
+
+3. 
